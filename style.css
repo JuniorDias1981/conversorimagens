@@ -1,0 +1,242 @@
+/* Resetando o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F8FF; /* Fundo azul claro suave */
+    color: #333333; /* Texto em cinza escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #504d4d; /* Cor principal - Tom de laranja avermelhado */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+header .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Efeito hover no logo */
+header:hover .logo img {
+    transform: rotate(10deg);
+}
+
+/* Contêiner principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input para o arquivo */
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: 2px solid #4B9CD3; /* Azul suave */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #4B9CD3;
+    background-color: #e6f0ff; /* Azul claro suave no hover */
+}
+
+/* Controles para o redimensionamento */
+.controls {
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.controls label {
+    font-size: 1rem;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #555555; /* Texto secundário em cinza médio */
+}
+
+.controls input[type="number"] {
+    padding: 8px;
+    font-size: 1rem;
+    width: 80px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 2px solid #4B9CD3;
+    transition: border-color 0.3s ease;
+}
+
+.controls input[type="number"]:focus {
+    border-color: #FF6347; /* Foco na cor principal */
+}
+
+.controls button {
+    padding: 12px 24px;
+    background-color: #4B9CD3; /* Cor principal para os botões */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #045b96; /* Cor mais forte no hover */
+    transform: scale(1.05);
+}
+
+/* Canvas oculto */
+canvas {
+    display: none;
+}
+
+/* Área de download */
+#output {
+    margin-top: 20px;
+}
+
+#output button {
+    padding: 12px 24px;
+    background-color: #4B9CD3; /* Azul suave */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#output button:hover {
+    background-color: #1E73B2; /* Tom mais escuro de azul */
+    transform: scale(1.05);
+}
+
+/* Efeito de transição nos botões */
+button:active {
+    transform: scale(0.98);
+}
+
+.sizes-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sizes-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sizes-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sizes-box li {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: hsl(0, 7%, 94%); /* Cor principal para os links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #faf8f8; /* Cor mais forte no hover */
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container h1 {
+        font-size: 1.6rem;
+    }
+
+    .controls label, .controls input[type="number"], .controls button {
+        font-size: 0.9rem;
+    }
+
+    #output button {
+        font-size: 0.9rem;
+    }
+}

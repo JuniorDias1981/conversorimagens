@@ -1,0 +1,91 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ferramenta simples e profissional para converter imagens em JPEG, PNG ou ico online.">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <!-- 
+Autor: junior Dias !
+-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Imagens</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo do Conversor de Imagens" id="logo">
+        </div>
+        <h1>Conversor de Imagens</h1>
+    </header>
+    <div class="container">
+        <h1>Editor de Imagem</h1>
+
+        <!-- Input para selecionar o arquivo -->
+        <input type="file" id="fileInput" accept="image/*,.svg,.webp" aria-label="Escolha uma imagem para converter">
+
+        <div class="controls">
+            <label for="width">Largura:</label>
+            <input type="number" id="width" min="1" aria-labelledby="widthLabel">
+            <label for="height">Altura:</label>
+            <input type="number" id="height" min="1" aria-labelledby="heightLabel">
+            <button id="resizeBtn" aria-label="Redimensionar imagem">Redimensionar</button>
+        </div>
+
+        <!-- Feedback de carregamento -->
+        <div id="loading" style="display: none;">Carregando...</div>
+
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div id="output">
+            <button id="downloadPng" aria-label="Baixar imagem como PNG">Baixar PNG</button>
+            <button id="downloadJpg" aria-label="Baixar imagem como JPG">Baixar JPG</button>
+            <button id="downloadIco" aria-label="Baixar imagem como ICO">Baixar ICO</button>
+        </div>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div id="output" style="display: none;">
+            <h2>Baixar os Ícones</h2>
+            <button id="favicon16">Favicon 16x16</button>
+            <button id="favicon32">Favicon 32x32</button>
+            <button id="favicon48">Favicon 48x48</button>
+            <button id="instagramProfile">Instagram Perfil (320x320)</button>
+            <button id="whatsappProfile">WhatsApp Perfil (192x192)</button>
+            <button id="facebookProfile">Facebook Perfil (180x180)</button>
+        </div>
+
+        <!-- Box Shadow para tamanhos de ícones -->
+        <div id="sizes" class="sizes-box">
+            <h3>Tamanhos padrões</h3>
+            <ul>
+                <li><strong>Favicon:</strong> 16x16, 32x32, 48x48</li>
+                <li><strong>Instagram (Perfil):</strong> 320x320</li>
+                <li><strong>Instagram (Story/Reels):</strong> 1080x1920</li>
+                <li><strong>WhatsApp (Perfil):</strong> 192x192</li>
+                <li><strong>WhatsApp (Ícone de Grupo):</strong> 512x512</li>
+                <li><strong>Facebook (Perfil):</strong> 180x180</li>
+                <li><strong>Facebook (Capa):</strong> 820x312</li>
+                <li><strong>Facebook (Post):</strong> 1200x630</li>
+            </ul>
+            
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <p><strong>E-mail:</strong>
+            <a href="mailto:jrdias32@gmail.com" class="email-link">jrdias32@gmail.com</a>
+        </p>
+        <p><strong>Visite minha página pessoal:</strong>
+            <a href="https://juniordias1981.github.io/JRmanutencao/" target="_blank" class="web-link">
+                <i class="fas fa-globe"></i> JR Manutenção
+            </a>
+        </p>
+        <p>&copy; 2024 Conversor de Imagens</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
